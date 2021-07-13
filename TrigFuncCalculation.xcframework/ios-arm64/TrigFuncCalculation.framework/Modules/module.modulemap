@@ -1,0 +1,11 @@
+framework module TrigFuncCalculation {
+  umbrella header "TrigFuncCalculation.h"
+
+  export *
+  module * { export * }
+}
+
+module TrigFuncCalculation.Swift {
+    header "TrigFuncCalculation-Swift.h"
+    requires objc
+}

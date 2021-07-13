@@ -1,0 +1,11 @@
+framework module CalculatorUI {
+  umbrella header "CalculatorUI.h"
+
+  export *
+  module * { export * }
+}
+
+module CalculatorUI.Swift {
+    header "CalculatorUI-Swift.h"
+    requires objc
+}

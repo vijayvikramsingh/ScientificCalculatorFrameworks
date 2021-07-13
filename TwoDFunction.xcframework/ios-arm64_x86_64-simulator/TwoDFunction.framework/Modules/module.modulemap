@@ -1,0 +1,11 @@
+framework module TwoDFunction {
+  umbrella header "TwoDFunction.h"
+
+  export *
+  module * { export * }
+}
+
+module TwoDFunction.Swift {
+    header "TwoDFunction-Swift.h"
+    requires objc
+}

@@ -1,0 +1,11 @@
+framework module SimpleCalculation {
+  umbrella header "SimpleCalculation.h"
+
+  export *
+  module * { export * }
+}
+
+module SimpleCalculation.Swift {
+    header "SimpleCalculation-Swift.h"
+    requires objc
+}

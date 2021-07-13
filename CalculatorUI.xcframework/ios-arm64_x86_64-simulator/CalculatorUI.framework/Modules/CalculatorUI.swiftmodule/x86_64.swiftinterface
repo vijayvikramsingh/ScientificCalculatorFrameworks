@@ -1,0 +1,38 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target x86_64-apple-ios14.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CalculatorUI
+@_exported import CalculatorUI
+import Swift
+import UIKit
+public enum TrigSymbols {
+  case Sin, Cos, Tan
+  public static func == (a: CalculatorUI.TrigSymbols, b: CalculatorUI.TrigSymbols) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum TwoDSymbols {
+  case Square, Root, Log, Loge, Reverse
+  public static func == (a: CalculatorUI.TwoDSymbols, b: CalculatorUI.TwoDSymbols) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol MathEvaluation : AnyObject {
+  func evaluateSimpleMathFunction(number: Swift.String, symbol: Swift.Character) -> Swift.String?
+  func evaluateTrigFunction(number: Swift.String, symbol: Swift.Character, trigSymbol: CalculatorUI.TrigSymbols) -> Swift.String?
+  func evaluateTwoDFunction(number: Swift.String, symbol: Swift.Character, twoDSymbol: CalculatorUI.TwoDSymbols) -> Swift.String?
+}
+@objc @_hasMissingDesignatedInitializers public class CalculatorViewController : UIKit.UIViewController {
+  weak public var delegate: CalculatorUI.MathEvaluation!
+  @objc override dynamic public func viewDidLoad()
+  @objc dynamic public init()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension CalculatorUI.TrigSymbols : Swift.Equatable {}
+extension CalculatorUI.TrigSymbols : Swift.Hashable {}
+extension CalculatorUI.TwoDSymbols : Swift.Equatable {}
+extension CalculatorUI.TwoDSymbols : Swift.Hashable {}
