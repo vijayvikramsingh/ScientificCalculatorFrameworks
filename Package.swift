@@ -8,19 +8,13 @@ let package = Package(
     products: [
         .library(
             name: "ScientificCalculator",
-            targets: ["CalculatorUI", "SimpleCalculation", "TrigFuncCalculation", "TwoDFunction"])
+            targets: ["CalculatorUI", "CalculatorUmbrella"])
     ],
     targets: [
         .binaryTarget(
             name: "CalculatorUI",
             path: "CalculatorUI.xcframework"),
         .binaryTarget(
-            name: "SimpleCalculation",
-            path: "SimpleCalculation.xcframework"),
-        .binaryTarget(
-            name: "TrigFuncCalculation",
-            path: "TrigFuncCalculation.xcframework"),
-        .binaryTarget(
-            name: "TwoDFunction",
-            path: "TwoDFunction.xcframework")
+            name: "CalculatorUmbrella",
+            path: "CalculatorUmbrella.xcframework")
     ])

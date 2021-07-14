@@ -1,0 +1,21 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target x86_64-apple-ios14.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CalculatorUmbrella
+@_exported import CalculatorUmbrella
+import Foundation
+import Swift
+public struct CalculatorFunctions {
+  public init()
+  public func signFunc(_ num: Swift.Double) -> Swift.Double
+  public func cosFunc(_ num: Swift.Double) -> Swift.Double
+  public func tanFunc(_ num: Swift.Double) -> Swift.Double
+  public func square(_ num: Swift.Double) -> Swift.Double
+  public func reverse(_ num: Swift.Double) -> Swift.Double
+  public func root(_ num: Swift.Double) -> Swift.Double
+  public func logarithm(_ num: Swift.Double) -> Swift.Double
+  public func loge(_ num: Swift.Double) -> Swift.Double
+  public func add(_ num1: Swift.Double, _ num2: Swift.Double) -> Swift.Double
+  public func substract(_ num1: Swift.Double, _ num2: Swift.Double) -> Swift.Double
+  public func multiply(_ num1: Swift.Double, _ num2: Swift.Double) -> Swift.Double
+  public func divide(_ num1: Swift.Double, _ num2: Swift.Double) -> Swift.Double
+}
